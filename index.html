@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang=en>
+<head>
+  <meta charset=utf-8>
+  <title>Inter-provincial Migration Flows in Turkey</title>
+  <meta name=description content="Inter-provincial Migration Flows in Turkey">
+  <meta name=viewport content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet" media="all">
+  
+  <script src="circular-migration-plot.min.js"></script>
+</head>
+<body>
+  <div id=container class="container">
+  
+   	<header role="banner">
+  		<h1 style="text-align:left">Inter-provincial Migration Flows in Turkey</h1>
+		
+		<div class="lead-in">
+		Only flows with at least 3,000 migrants are shown.
+		</div>
+	<hr>
+	</header>	
+
+	<div class="wrap">
+		<main role="main">
+		<nav role=navigation>
+		<div id="timeline"></div>
+		</nav>		
+		<div id="chart"></div>
+		</main>
+	</div>
+
+  <script>
+    var labels = {
+		2008: '2008',
+		2010: '2010',
+		2012: '2012',
+		2014: '2014'
+    }
+
+    CircularMigrationPlot({
+      data: 'turkey-migration-d3.json',
+      chart:{
+        element: '#chart',
+        mylayout: {
+          threshold: 3000,
+          labelThreshold: 4000,
+		  colors: ['#B80000','#CC33FF','#6600CC','#333399','#336699','#6699FF','#66CCFF','#009999','#009900','#99CC00','#FFCC00','#FF6600']  
+			  }
+      },
+      timeline: {
+        element: '#timeline',
+        formatter: function(d) {
+          return labels[d]
+        }
+      }
+	  });
+  </script>
+    
+	<footer role="contentinfo">
+
+ 		<div class="license">
+		This visualisation has been created by <a href="http://nikolasander.com"  target="_blank">Nikola Sander</a> with the <a href="https://github.com/jo/circular-migration-plot"  target="_blank">custom d3.js library</a> originally developed by Null2 for <a href="http://www.global-migration.info"  target="_blank">The Global Flow of People</a>.</p> 
+		</div>
+		
+	</footer>
+</div>
+	
+</body>
+</html>
