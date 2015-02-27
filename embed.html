@@ -55,23 +55,17 @@
 </head>
 <body>
 	<div class="lead-in">
+	<small>
 		The circular plot shows annual net-migration flows between Turkey's regions and provinces (i.e. inflows minus outflows). Flows have the same colour as their origin region. 
 		Only net-flows of more than 1,000 migrants are shown. Explore migration between provinces by clicking on the outer circle! 
+	</small>
 	</div>
-	<hr>
   <nav>
     <div id="timeline"></div>
   </nav>
   <div id="chart"></div>
-  <footer>
-    <small>
-	<a href="http://nikolasander.com/trade-flows/" target="_blank">http://nikolasander.com/turkey-migration</a>
-	This visualisation has been created by <a href="http://nikolasander.com"  target="_blank">Nikola Sander</a> using a <a href="https://github.com/jo/circular-migration-plot"  target="_blank">custom d3.js library</a> originally developed by Null2 for <a href="http://www.global-migration.info"  target="_blank">The Global Flow of People</a> and is made available under <a href="http://creativecommons.org/licenses/by/4.0/"  target="_blank">CC BY 4.0</a></p> 
-	Datasource: <a href="http://tuikapp.tuik.gov.tr/adnksdagitapp/adnks.zul?dil=2"  target="_blank">Turkish Statistical Institute</a>
-	</small>
-	</footer>
 
-   <script>
+  <script>
    var labels = {
 		2008: '2008',
 		2010: '2010',
@@ -97,11 +91,21 @@
       }
 	  });
   </script>
-  	<hr>
+	<hr>
     
 	<div>
 		<img src="map-turkey.jpg" alt="Map of Turkey's Provinces">
  	</div>
+
+ 	<footer>
+ 		<div class="license">
+		<small>
+		This visualisation has been created by <a href="http://nikolasander.com"  target="_blank">Nikola Sander</a> using a <a href="https://github.com/jo/circular-migration-plot"  target="_blank">custom d3.js library</a> originally developed by Null2 for <a href="http://www.global-migration.info"  target="_blank">The Global Flow of People</a>.</p> 
+		</small>
+		</div>
+	</footer>
+	
 </div>
+	
 </body>
 </html>
